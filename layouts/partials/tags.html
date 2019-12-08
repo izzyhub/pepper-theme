@@ -1,0 +1,10 @@
+<ul class="unstyled-list tag-list">
+  {{ range .Param "tags" }}
+    {{ $name := . }}
+    {{ with $.Site.GetPage (printf "/%s/%s" "tags" ($name | urlize)) }}
+      <li class="grow">
+        <a href="{{ .Permalink }}">{{ $name }}</a>
+      </li>
+    {{ end }}
+  {{ end }}
+</ul>

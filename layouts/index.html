@@ -1,0 +1,12 @@
+{{ define "main" }}
+  <main>
+    <header>
+      <h1>{{ .Page.Title }}</h1>
+    </header>
+    {{ .Page.Content }}
+    <h2>Recent Writing</h2>
+    {{ range first 3 .Site.RegularPages }}
+      {{ partial "post-summary.html" . }}
+    {{ end }}
+  </main>
+{{ end }}

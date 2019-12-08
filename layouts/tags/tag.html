@@ -1,11 +1,13 @@
 {{ define "main" }}
 <main>
+  <h1>{{.Title}}</h1>
   <ul class="unstyled-list article-list">
     {{ range .Data.Pages }}
       <li>
         {{ partial "post-summary.html" . }}
       </li>
-    {{end}}
+    {{ end }}
   </ul>
 </main>
-{{end}}
+{{ end }}
+

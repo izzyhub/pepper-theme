@@ -1,0 +1,15 @@
+
+{{ define "main" }}
+<main>
+  <ul>
+    {{ range .Data.Pages }}
+      <li>
+        <a href="{{ .Permalink }}">{{ .Page.Title }}</a>
+        <p>
+          {{ .Page.Summary }}
+        </p>
+      </li>
+    {{ end }}
+  </ul>
+</main>
+{{ end }}

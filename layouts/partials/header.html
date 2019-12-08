@@ -1,0 +1,9 @@
+<nav class="nav-header">
+  <ul class="unstyled-list nav-list">
+    {{ range .Site.Menus.main }}
+    <li>
+      <a href="{{ .URL }}">{{ .Name }}</a>
+    </li>
+    {{ end }}
+  </ul>
+</nav>

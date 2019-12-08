@@ -1,0 +1,12 @@
+<a href="{{ .Permalink }}">
+  <h2>{{.Title}}</h2>
+  {{ if (isset . "subtitle") }}
+  <h3>{{.subtitle}}</h3>
+  {{ end }}
+</a>
+{{ partial "tags.html" . }}
+<p>
+  {{ .Summary }}
+</p>
+<a class="read-more grow" href="{{ .Permalink }}">Read More →</a>
+

@@ -1,0 +1,13 @@
+{{ define "main" }}
+<main>
+  <h1>All Tags</h1>
+  {{ .Content }}
+  <ul class="unstyled-list tag-post-list">
+    {{ range .Site.Taxonomies.tags.ByCount }}
+      <li><a href="{{ .Page.Permalink }}">{{ .Page.Title }}</a> {{ .Count }}
+        posts.</li>
+    {{ end }}
+  </ul>
+<main>
+{{ end }}
+
