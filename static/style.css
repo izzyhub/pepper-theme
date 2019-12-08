@@ -16,7 +16,8 @@ main {
 }
 
 .nav-header {
-  height: 2rem;
+  height: 3rem;
+  font-size: x-large;
   background: rgb(234, 64, 74);
   grid-area: header;
   display: flex;
